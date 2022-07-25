@@ -13,7 +13,9 @@
       <div class="container">
         <nav class="navbar navbar-expand-lg custom_nav-container pt-3">
           <a class="navbar-brand" href="index.html">
-            <img src="images/logo.png" alt="" /><span>
+            <img src=<?php echo get_theme_file_uri( '/images/logo.png' )?>
+            alt="" />
+            <span>
               Tropiko
             </span>
           </a>
@@ -89,7 +91,9 @@
                     <div class="col-md-6">
                       <div class="slider_img-box">
                         <div>
-                          <img src="images/slide-img.png" alt="" class="" />
+                          <img src=
+                          <?php echo get_theme_file_uri( "/images/slide-img.png" )?>
+                           alt="" class="" />
                         </div>
                       </div>
                     </div>
@@ -131,7 +135,9 @@
                     <div class="col-md-6">
                       <div class="slider_img-box">
                         <div>
-                          <img src="images/slide-img.png" alt="" class="" />
+                          <img src=
+                          <?php echo get_theme_file_uri( "/images/slide-img.png" )?>
+                           alt="" class="" />
                         </div>
                       </div>
                     </div>
@@ -173,7 +179,9 @@
                     <div class="col-md-6">
                       <div class="slider_img-box">
                         <div>
-                          <img src="images/slide-img.png" alt="" class="" />
+                          <img src=
+                          <?php echo get_theme_file_uri( "/images/slide-img.png")?>
+                           alt="" class="" />
                         </div>
                       </div>
                     </div>

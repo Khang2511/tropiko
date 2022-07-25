@@ -413,6 +413,7 @@ a:focus {
   border-bottom: .8px solid #252525;
   width: 90%;
   margin: 10px 0;
+  background-color: transparent;
 }
 
 .contact_form-container {
