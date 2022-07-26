@@ -102,9 +102,22 @@ define('CORE', THEME_URL . "/core");
   if(!function_exists('test_menu')){
     function test_menu($menu){
         $menu = array(
-            'theme_location' => $menu,
-            'container' => 'nav',
-            'container_class' => $menu
+          'menu'                 => '',
+          'container_id'         => '',
+          'container_aria_label' => '',
+          'menu_class'           => 'navbar-nav',
+          'menu_id'              => '',
+          'echo'                 => true,
+          'fallback_cb'          => 'wp_page_menu',
+          'before'               => '',
+          'after'                => '',
+          'link_before'          => '',
+          'link_after'           => '',
+          'items_wrap'           => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+          'item_spacing'         => 'preserve',
+          'depth'                => 0,
+          'walker'               => '',
+          'theme_location'       => '',
         );
         wp_nav_menu( $menu );
     }
@@ -150,3 +163,9 @@ define('CORE', THEME_URL . "/core");
 
 }
 add_action('wp_enqueue_scripts', 'load_css');
+
+if( function_exists('acf_add_options_page') ) {
+	
+	acf_add_options_page();
+	
+}

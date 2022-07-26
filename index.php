@@ -1,6 +1,6 @@
 <?php get_header(  ) ?>
   <!-- service section -->
-
+  
   <section class="service_section layout_padding ">
     <div class="container">
       <h2 class="custom_heading">Our Services</h2>
