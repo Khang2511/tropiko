@@ -92,7 +92,7 @@ body {
   margin: 0 auto;
 }
 
-.custom_nav-container.navbar-expand-lg .navbar-nav .nav-link {
+.custom_nav-container.navbar-expand-lg .navbar-nav a {
   padding: 10px 30px;
   color: #343434;
   text-align: center
@@ -413,7 +413,6 @@ a:focus {
   border-bottom: .8px solid #252525;
   width: 90%;
   margin: 10px 0;
-  background-color: transparent;
 }
 
 .contact_form-container {

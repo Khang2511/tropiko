@@ -1,11 +1,12 @@
 <!-- footer section -->
-  <section class="container-fluid footer_section">
+<section class="container-fluid footer_section">
     <p>
       Copyright &copy; 2019 All Rights Reserved By
       <a href="https://html.design/">Free Html Templates</a>
     </p>
   </section>
   <!-- footer section -->
+<?php wp_footer();?>
 
 </body>
 </html>

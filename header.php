@@ -1,22 +1,26 @@
-<!DOCTPE html>
-<html <?php language_attributes(); ?> />
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <meta charset="<?php bloginfo( 'charset' ); ?>"/>
-    <link rel="profile" href="http://gmgp.org/xfn/11" />
-    <link rel="pingback" href="<?php bloginfo( 'pingback_url' );?>" />
-    <?php wp_head(  ); ?>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title><?php bloginfo('name');?></title>
+
+    <?php wp_head();?>
+
 </head>
-<body <?php body_class(  ); ?>>
-          
+
+
+<body <?php body_class();?>>
 <div class="hero_area">
     <!-- header section strats -->
     <header class="header_section">
       <div class="container">
         <nav class="navbar navbar-expand-lg custom_nav-container pt-3">
           <a class="navbar-brand" href="index.html">
-            <img src=<?php echo get_theme_file_uri( '/images/logo.png' )?>
-            alt="" />
-            <span>
+          <img src='<?php the_field('logo', 'option'); ?>'
+          alt="" />
+          <span>
               Tropiko
             </span>
           </a>
@@ -24,11 +28,13 @@
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
-
+          
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <div class="d-flex ml-auto flex-column flex-lg-row align-items-center">
-              <?php test_menu('primary-menu'); ?>
-              <!-- <ul class="navbar-nav">
+            <?php
+        test_menu('Top Menu');
+    ?>
+              <!-- <ul class="navbar-nav  ">
                 <li class="nav-item active">
                   <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
                 </li>
@@ -56,155 +62,3 @@
       </div>
     </header>
     <!-- end header section -->
-    <!-- slider section -->
-    <section class=" slider_section position-relative">
-      <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <div class="slider_item-box">
-              <div class="slider_item-container">
-                <div class="container">
-                  <div class="row">
-                    <div class="col-md-6">
-                      <div class="slider_item-detail">
-                        <div>
-                          <h1>
-                            Welcome to <br />
-                            Our Fruits Shop
-                          </h1>
-                          <p>
-                            There are many variations of passages of Lorem
-                            Ipsum available, but the majority have suffered
-                            alteration in some form, by injected humour, or
-                            randomised words which don't look even slightly
-                            believable.
-                          </p>
-                          <div class="d-flex">
-                            <a href="" class="text-uppercase custom_orange-btn mr-3">
-                              Shop Now
-                            </a>
-                            <a href="" class="text-uppercase custom_dark-btn">
-                              Contact Us
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-md-6">
-                      <div class="slider_img-box">
-                        <div>
-                          <img src=
-                          <?php echo get_theme_file_uri( "/images/slide-img.png" )?>
-                           alt="" class="" />
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <div class="slider_item-box">
-              <div class="slider_item-container">
-                <div class="container">
-                  <div class="row">
-                    <div class="col-md-6">
-                      <div class="slider_item-detail">
-                        <div>
-                          <h1>
-                            Welcome to <br />
-                            Our Fruits Shop
-                          </h1>
-                          <p>
-                            There are many variations of passages of Lorem
-                            Ipsum available, but the majority have suffered
-                            alteration in some form, by injected humour, or
-                            randomised words which don't look even slightly
-                            believable.
-                          </p>
-                          <div class="d-flex">
-                            <a href="" class="text-uppercase custom_orange-btn mr-3">
-                              Shop Now
-                            </a>
-                            <a href="" class="text-uppercase custom_dark-btn">
-                              Contact Us
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-md-6">
-                      <div class="slider_img-box">
-                        <div>
-                          <img src=
-                          <?php echo get_theme_file_uri( "/images/slide-img.png" )?>
-                           alt="" class="" />
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <div class="slider_item-box">
-              <div class="slider_item-container">
-                <div class="container">
-                  <div class="row">
-                    <div class="col-md-6">
-                      <div class="slider_item-detail">
-                        <div>
-                          <h1>
-                            Welcome to <br />
-                            Our Fruits Shop
-                          </h1>
-                          <p>
-                            There are many variations of passages of Lorem
-                            Ipsum available, but the majority have suffered
-                            alteration in some form, by injected humour, or
-                            randomised words which don't look even slightly
-                            believable.
-                          </p>
-                          <div class="d-flex">
-                            <a href="" class="text-uppercase custom_orange-btn mr-3">
-                              Shop Now
-                            </a>
-                            <a href="" class="text-uppercase custom_dark-btn">
-                              Contact Us
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-md-6">
-                      <div class="slider_img-box">
-                        <div>
-                          <img src=
-                          <?php echo get_theme_file_uri( "/images/slide-img.png")?>
-                           alt="" class="" />
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="custom_carousel-control">
-          <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-            <span class="sr-only">Previous</span>
-          </a>
-          <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-            <span class="sr-only">Next</span>
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <!-- end slider section -->
-  </div>
-
-  <!-- service section -->
