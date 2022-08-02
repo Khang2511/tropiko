@@ -73,15 +73,15 @@ body {
 
 /*header section*/
 .hero_area {
-  height: 98vh;
-  background-color: #f7f7f7;
 }
 
 .hero_area.sub_pages {
   height: auto;
 }
 
-.header_section {}
+.header_section {
+  background-color: #f7f7f7;
+}
 
 .header_section .container-fluid {
   padding-right: 25px;
@@ -94,7 +94,7 @@ body {
 
 .custom_nav-container.navbar-expand-lg .navbar-nav a {
   padding: 10px 30px;
-  color: #343434;
+  color: #d11010;;
   text-align: center
 }
 
@@ -181,7 +181,8 @@ a:focus {
 
 /* slider section */
 .slider_section {
-  padding-top: 8%;
+  padding: 8% 0px 10% 0px;
+  background-color: #f7f7f7;
 }
 
 .slider_item-box {
