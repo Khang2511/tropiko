@@ -1,10 +1,10 @@
 <?php get_header();?>
 
-    
-    <!-- slider section -->
-    <section class=" slider_section position-relative">
-        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-            <div class="carousel-inner">
+
+<!-- slider section -->
+<section class=" slider_section position-relative">
+    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
             <?php
 // Check rows exists.
 if( have_rows('slide') ):
@@ -12,36 +12,37 @@ if( have_rows('slide') ):
     while( have_rows('slide') ) : the_row();
      $image = get_sub_field('image');
         ?>
-    <div class="<?php the_sub_field('class'); ?>">
-                    <div class="slider_item-box">
-                        <div class="slider_item-container">
-                            <div class="container">
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <div class="slider_item-detail">
-                                            <div>
-                                                <h1>
-                                                <?php the_sub_field('tittle'); ?>
-                                                </h1>
-                                                <p>
-                                                <?php the_sub_field('description'); ?>
-                                                </p>
-                                                <div class="d-flex">
-                                                    <a href="" class="text-uppercase custom_orange-btn mr-3">
+            <div class="<?php the_sub_field('class-slide'); ?>">
+                <div class="slider_item-box">
+                    <div class="slider_item-container">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="slider_item-detail">
+                                        <div>
+                                            <h1>
+                                                <?php the_sub_field('tittle-slide'); ?>
+                                            </h1>
+                                            <p>
+                                                <?php the_sub_field('desc-slide'); ?>
+                                            </p>
+                                            <div class="d-flex">
+                                                <a href="<?php the_sub_field('button-shop-url'); ?>"
+                                                    class="text-uppercase custom_orange-btn mr-3">
                                                     <?php the_sub_field('button-text-shop'); ?>
-                                                    </a>
-                                                    <a href="" class="text-uppercase custom_dark-btn">
+                                                </a>
+                                                <a href="<?php the_sub_field('button-contact-url'); ?>"
+                                                    class="text-uppercase custom_dark-btn">
                                                     <?php the_sub_field('button-text-contact'); ?>
-                                                    </a>
-                                                </div>
+                                                </a>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-md-6">
-                                        <div class="slider_img-box">
-                                            <div>
-                                                <img src="<?php the_sub_field('image'); ?>" alt="" class="" />
-                                            </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="slider_img-box">
+                                        <div>
+                                            <img src="<?php the_sub_field('image-slide'); ?>" alt="" class="" />
                                         </div>
                                     </div>
                                 </div>
@@ -49,162 +50,38 @@ if( have_rows('slide') ):
                         </div>
                     </div>
                 </div>
-        <?php endwhile;
+            </div>
+            <?php endwhile;
 
 // No value.
 else :
     // Do something...
 endif;
 ?>
-
-
-            </div>
-            <div class="custom_carousel-control">
-                <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-                    <span class="sr-only">Previous</span>
-                </a>
-                <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-                    <span class="sr-only">Next</span>
-                </a>
-            </div>
         </div>
-    </section>
-
-    <!-- end slider section -->
-</div>
-
-<!-- service section -->
-
-<section class="service_section layout_padding ">
-    <div class="container">
-        <h2 class="custom_heading"><?php the_field('tittle', 'option'); ?></h2>
-        <p class="custom_heading-text">
-        <?php the_field('description', 'option'); ?>
-        </p>
-        <div class=" layout_padding2">
-        <?php
-// Check rows exists.
-if( have_rows('services') ):
-    // Loop through rows.
-    while( have_rows('services') ) : the_row();
-        ?>
-                <div class="card-deck">
-                <div class="card">
-                    <img class="card-img-top" src="<?php the_sub_field('icon'); ?>" alt="Card image cap" />
-                    
-                    <div class="card-body">
-                        <h5 class="card-title"><?php the_sub_field('tittle'); ?></h5>
-                        <p class="card-text">
-                        <?php the_sub_field('description'); ?>
-                        </p>
-                    </div>
-                </div>
-            </div>
-        <?php endwhile;
-
-// No value.
-else :
-    // Do something...
-endif;
-?>
-
-        </div>
-        <div class="d-flex justify-content-center">
-            <a href="" class="custom_dark-btn">
-                Read More
+        <div class="custom_carousel-control">
+            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                <span class="sr-only">Next</span>
             </a>
         </div>
     </div>
 </section>
 
+<!-- end slider section -->
+</div>
+
+<!-- service section -->
+
+<?php get_template_part( 'template-part/service-part','part' ) ?>
+
 <!-- end service section -->
 
 <!-- fruits section -->
 
-<section class="fruit_section">
-    <div class="container">
-        <h2 class="custom_heading">Fresh Fruits</h2>
-        <p class="custom_heading-text">
-            There are many variations of passages of Lorem Ipsum available, but
-            the majority have
-        </p>
-        <div class="row layout_padding2">
-            <div class="col-md-8">
-                <div class="fruit_detail-box">
-                    <h3>
-                        Best Fresh Orange
-                    </h3>
-                    <p class="mt-4 mb-5">
-                        but the majority have suffered alteration in some form, by
-                        injected humour, or randomised words which don't look even
-                        slightly believable. If you are going to use a passage of Lorem
-                        Ipsum, you need to be
-                    </p>
-                    <div>
-                        <a href="" class="custom_dark-btn">
-                            Buy Now
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 d-flex justify-content-center align-items-center">
-                <div class="fruit_img-box d-flex justify-content-center align-items-center">
-                    <img src="<?php the_field('orange', 'option'); ?>" alt="" class="" width="250px" />
-                </div>
-            </div>
-        </div>
-        <div class="row layout_padding2">
-            <div class="col-md-8">
-                <div class="fruit_detail-box">
-                    <h3>
-                        Best Fresh Grapes
-                    </h3>
-                    <p class="mt-4 mb-5">
-                        but the majority have suffered alteration in some form, by
-                        injected humour, or randomised words which don't look even
-                        slightly believable. If you are going to use a passage of Lorem
-                        Ipsum, you need to be
-                    </p>
-                    <div>
-                        <a href="" class="custom_dark-btn">
-                            Buy Now
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 d-flex justify-content-center align-items-center">
-                <div class="fruit_img-box d-flex justify-content-center ">
-                    <img src="<?php the_field('grapes', 'option'); ?>" alt="" class="" width="100px" />
-                </div>
-            </div>
-        </div>
-        <div class="row layout_padding2-top layout_padding-bottom">
-            <div class="col-md-8">
-                <div class="fruit_detail-box">
-                    <h3>
-                        Best Fresh Gauva
-                    </h3>
-                    <p class="mt-4 mb-5">
-                        but the majority have suffered alteration in some form, by
-                        injected humour, or randomised words which don't look even
-                        slightly believable. If you are going to use a passage of Lorem
-                        Ipsum, you need to be
-                    </p>
-                    <div>
-                        <a href="" class="custom_dark-btn">
-                            Buy Now
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 d-flex justify-content-center align-items-center">
-                <div class="fruit_img-box d-flex justify-content-center align-items-center">
-                    <img src="<?php the_field('gauva', 'option'); ?>" alt="" class="" width="250px" />
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+<?php get_template_part( 'template-part/fruits-part','part' ) ?>
 
 <!-- end fruits section -->
 
@@ -212,9 +89,15 @@ endif;
 <section class="tasty_section">
     <div class="container_fluid">
         <h2>
-            Very tasty fruits
+            <?php the_field('tasty-tittle'); ?>
         </h2>
     </div>
+    <style>
+    .tasty_section {
+        background-image: url(<?php the_field('tasty-background');
+        ?>)
+    }
+    </style>
 </section>
 
 <!-- end tasty section -->
@@ -223,71 +106,34 @@ endif;
 
 <section class="client_section layout_padding">
     <div class="container">
-        <h2 class="custom_heading">Testimonial</h2>
+        <h2 class="custom_heading"><?php the_field('testimonial-tittle'); ?></h2>
         <p class="custom_heading-text">
-            There are many variations of passages of Lorem Ipsum available, but
-            the majority have
+            <?php the_field('desc-testimonial'); ?>
         </p>
         <div>
             <div id="carouselExampleControls-2" class="carousel slide" data-ride="carousel">
                 <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <div class="client_container layout_padding2">
-                            <div class="client_img-box">
-                                <img src="<?php the_field('client', 'option'); ?>" alt="" />
-                            </div>
-                            <div class="client_detail">
-                                <h3>
-                                    Johnhex
-                                </h3>
-                                <p class="custom_heading-text">
-                                    There are many variations of passages of Lorem Ipsum
-                                    available, but the majority have suffered alteration in
-                                    some form, by injected humour, or randomised words which
-                                    don't look even slightly believable. If you are <br />
-                                    going to use a passage of Lorem Ipsum, you need to be sure
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <div class="client_container layout_padding2">
-                            <div class="client_img-box">
-                                <img src="<?php the_field('client', 'option'); ?>" alt="" />
-                            </div>
-                            <div class="client_detail">
-                                <h3>
-                                    Johnhex
-                                </h3>
-                                <p class="custom_heading-text">
-                                    There are many variations of passages of Lorem Ipsum
-                                    available, but the majority have suffered alteration in
-                                    some form, by injected humour, or randomised words which
-                                    don't look even slightly believable. If you are <br />
-                                    going to use a passage of Lorem Ipsum, you need to be sure
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <div class="client_container layout_padding2">
-                            <div class="client_img-box">
-                                <img src="<?php the_field('client', 'option'); ?>" alt="" />
-                            </div>
-                            <div class="client_detail">
-                                <h3>
-                                    Johnhex
-                                </h3>
-                                <p class="custom_heading-text">
-                                    There are many variations of passages of Lorem Ipsum
-                                    available, but the majority have suffered alteration in
-                                    some form, by injected humour, or randomised words which
-                                    don't look even slightly believable. If you are <br />
-                                    going to use a passage of Lorem Ipsum, you need to be sure
-                                </p>
-                            </div>
-                        </div>
-                    </div>
+                    <?php
+
+
+// // No value.
+// else :
+//     // Do something...
+// endif;
+// ?>
+        <?php 
+         $testimonial=new WP_Query(array(
+            'post_type' => 'testimonial',
+         ));
+        ?>
+        <?php if($testimonial->have_posts( )): 
+            while($testimonial->have_posts()):
+            $testimonial->the_post(); ?>
+        <?php the_content( ); ?>
+        <?php endwhile; 
+    
+    endif; ?>    
+
                 </div>
                 <div class="custom_carousel-control">
                     <a class="carousel-control-prev" href="#carouselExampleControls-2" role="button" data-slide="prev">
@@ -308,49 +154,16 @@ endif;
 <!-- end client section -->
 
 <!-- contact section -->
-<section class="contact_section layout_padding">
-    <div class="container">
-        <h2 class="font-weight-bold">
-            Contact Us
-        </h2>
-        <div class="row">
-            <div class="col-md-8 mr-auto">
-                <form action="">
-                    <div class="contact_form-container">
-                        <div>
-                            <div>
-                                <input type="text" placeholder="Name">
-                            </div>
-                            <div>
-                                <input type="text" placeholder="Phone Number">
-                            </div>
-                            <div>
-                                <input type="email" placeholder="Email">
-                            </div>
-
-                            <div class="mt-5">
-                                <input type="text" placeholder="Message">
-                            </div>
-                            <div class="mt-5">
-                                <button type="submit">
-                                    send
-                                </button>
-                            </div>
-                        </div>
-
-                    </div>
-
-                </form>
-            </div>
-        </div>
-    </div>
-</section>
+<?php get_template_part( 'template-part/contact-part','part' ) ?>
 <!-- end contact section -->
-
 
 <!-- map section -->
 <section class="map_section">
     <div id="map" class="h-100 w-100 ">
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d99029.84505283511!2d-84.61044109524899!3d39.13645224401073!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x884051b1de3821f9%3A0x69fb7e8be4c09317!2zQ2luY2lubmF0aSwgT2hpbywgSG9hIEvhu7M!5e0!3m2!1svi!2s!4v1658717392667!5m2!1svi!2s"
+            width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
 </section>
 

@@ -1,5 +1,5 @@
 <?php get_header();?>
-
+<div>Éc</div>
 <!-- slider section -->
 <section class=" slider_section position-relative">
       <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
@@ -14,7 +14,7 @@
                         <div>
                           <h1>
                             Welcome to <br />
-                            Our Fruits Shop
+                            Our Fruits Shop2
                           </h1>
                           <p>
                             There are many variations of passages of Lorem

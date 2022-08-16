@@ -1,6 +1,6 @@
 <?php get_header();?>
 
-
+<div>Éccccc</div>
 <!-- slider section -->
 <section class=" slider_section position-relative">
     
