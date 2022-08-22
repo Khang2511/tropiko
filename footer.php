@@ -5,10 +5,10 @@
         <?php test_menu2('footer-menu'); ?>
         </div>
         <div class="col-md-3">
-        <?php test_menu2('footer-menu'); ?>
+        <?php test_menu2('footer-menu-col2'); ?>
         </div>
         <div class="col-md-3">
-        <?php test_menu2('footer-menu'); ?>
+        <?php test_menu2('footer-menu-col3'); ?>
         </div>
                 
             <div class="col-md-3">

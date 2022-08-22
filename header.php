@@ -34,15 +34,15 @@
             <?php
               test_menu('top-menu')
             ?>
-              <form class="form-inline my-2 my-lg-0 ml-0 ml-lg-4 mb-3 mb-lg-0">
-                <button 
-                class="btn  my-2 my-sm-0 nav_search-btn" type="submit"></button>
+              <!-- <form class="form-inline my-2 my-lg-0 ml-0 ml-lg-4 mb-3 mb-lg-0">
+                <a href="http://localhost/wordpress/search/"
+                class="btn  my-2 my-sm-0 nav_search-btn" type="submit"></a>
                 <style>
                  .nav_search-btn {
                   background-image: url(<?php the_field('search-icon', 'option'); ?>)
                 }
                 </style>
-              </form>
+              </form> -->
             </div>
             <div class="quote_btn-container ml-0 ml-lg-4 d-flex justify-content-center">
               <a href="<?php the_field('get-quote-url','option') ?>">

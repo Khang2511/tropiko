@@ -27,6 +27,8 @@ add_action('wp_enqueue_scripts', 'load_js');
 register_nav_menus( array(
     'top-menu' => __( 'Top Menu', 'theme' ),
     'footer-menu' => __( 'Footer Menu', 'theme' ),
+    'footer-menu-col2' => __( 'Footer Col2', 'theme' ),
+    'footer-menu-col3' => __( 'Footer Col3', 'theme' ),
 ) );
 
 if(!function_exists('test_menu')){
