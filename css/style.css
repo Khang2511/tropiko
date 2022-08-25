@@ -430,6 +430,16 @@ a:focus {
   width: auto;
 }
 
+.send{
+  border: none;
+  background-color: #fc5d35;
+  color: #fff;
+  padding: 8px 40px;
+  text-transform: uppercase;
+  font-size: 14px;
+  width: auto !important;
+}
+
 
 /* contact section */
 
@@ -504,3 +514,16 @@ a:focus {
 }
 
 /* end footer section*/
+/* search section */
+
+.search_section{
+  min-height: 50vh;
+}
+
+.page{
+  min-height: 50vh;
+}
+
+.search-container{
+  min-height: 50vh;
+}

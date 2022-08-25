@@ -1,7 +1,7 @@
 <?php get_header();?>
 
 
-<section class="page">
+<!-- <section class="page">
     <div class="container">
 
 
@@ -13,6 +13,6 @@
 
 
     </div>
-</section>
+</section> -->
 
 <?php get_footer();?>

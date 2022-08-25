@@ -17,7 +17,7 @@
     <header class="header_section">
       <div class="container">
         <nav class="navbar navbar-expand-lg custom_nav-container pt-3">
-          <a class="navbar-brand" href="index.html">
+          <a class="navbar-brand" href="http://localhost/wordpress/">
           <img src='<?php the_field('logo', 'option'); ?>'
           alt="" />
           <span>
@@ -34,7 +34,7 @@
             <?php
               test_menu('top-menu')
             ?>
-              <!-- <form class="form-inline my-2 my-lg-0 ml-0 ml-lg-4 mb-3 mb-lg-0">
+              <form class="form-inline my-2 my-lg-0 ml-0 ml-lg-4 mb-3 mb-lg-0">
                 <a href="http://localhost/wordpress/search/"
                 class="btn  my-2 my-sm-0 nav_search-btn" type="submit"></a>
                 <style>
@@ -42,7 +42,7 @@
                   background-image: url(<?php the_field('search-icon', 'option'); ?>)
                 }
                 </style>
-              </form> -->
+              </form>
             </div>
             <div class="quote_btn-container ml-0 ml-lg-4 d-flex justify-content-center">
               <a href="<?php the_field('get-quote-url','option') ?>">
