@@ -7,13 +7,12 @@
         <?php the_field('desc-fruits'); ?>
         </p>
         <?php
-// Check rows exists.
-if( have_rows('fruits-item') ):
-    // Loop through rows.
-    while( have_rows('fruits-item') ) : the_row();
-        ?>
-
-<div class="row layout_padding2">
+        // Check rows exists.
+        if( have_rows('fruits-item') ):
+            // Loop through rows.
+            while( have_rows('fruits-item') ) : the_row();
+                ?>
+        <div class="row layout_padding2">
             <div class="col-md-8">
                 <div class="fruit_detail-box">
                     <h3>
@@ -43,7 +42,6 @@ else :
     // Do something...
 endif;
 ?>
-        
     </div>
 </section>
 

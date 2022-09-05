@@ -113,27 +113,39 @@ endif;
         <div>
             <div id="carouselExampleControls-2" class="carousel slide" data-ride="carousel">
                 <div class="carousel-inner">
-                    <?php
-
-
-// // No value.
-// else :
-//     // Do something...
-// endif;
-// ?>
-        <?php 
-         $testimonial=new WP_Query(array(
-            'post_type' => 'testimonial',
-         ));
-        ?>
-        <?php if($testimonial->have_posts( )): 
-            while($testimonial->have_posts()):
-            $testimonial->the_post(); ?>
-        <?php the_content( ); ?>
-        <?php endwhile; 
-    
-    endif; ?>    
-
+                    <?php 
+                    $testimonial=new WP_Query(array(
+                        'post_type' => 'testimonial',
+                    ));
+                    ?>
+                    <?php $count = 0 ?>
+                    <?php if($testimonial->have_posts( )): 
+                        while($testimonial->have_posts()):
+                        $testimonial->the_post(); 
+                        ?>
+                        <?php if ( $count == 0 )  {  ?>
+                            <?php $count= $count+1 ?>
+                            <div class="carousel-item active">
+                                <div class="client_container layout_padding2">
+                                    <?php the_post_thumbnail(); ?>    
+                                    <h3><?php the_title(); ?></h3>
+                                    <?php the_content( ); ?>
+                                </div>
+                            </div>
+                            <?php } 
+                            else {?>
+                            <?php $count= $count+1 ?>
+                            <div class="carousel-item ">
+                                <div class="client_container layout_padding2">
+                                    <?php the_post_thumbnail(); ?>
+                                    <h3><?php the_title(); ?></h3>
+                                    <?php the_content( ); ?>
+                                </div>
+                            </div>
+                            <?php
+                        }?>
+                    <?php endwhile; 
+                    endif; ?>    
                 </div>
                 <div class="custom_carousel-control">
                     <a class="carousel-control-prev" href="#carouselExampleControls-2" role="button" data-slide="prev">
@@ -145,7 +157,6 @@ endif;
                         <span class="sr-only">Next</span>
                     </a>
                 </div>
-
             </div>
         </div>
     </div>

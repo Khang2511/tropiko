@@ -8,6 +8,6 @@ get_header(); ?>
 
 <?php get_template_part( 'template-part/service-part','part' ) ?>
 
-  <!-- end service section -->
+<!-- end service section -->
 
 <?php get_footer(); ?>

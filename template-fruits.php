@@ -8,7 +8,7 @@ get_header(); ?>
 
 <?php get_template_part( 'template-part/fruits-part','part' ) ?>
 
-  <!-- end fruits section -->
+<!-- end fruits section -->
 
 
 <?php get_footer(); ?>

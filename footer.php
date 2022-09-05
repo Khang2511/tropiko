@@ -10,7 +10,6 @@
         <div class="col-md-3">
         <?php test_menu2('footer-menu-col3'); ?>
         </div>
-                
             <div class="col-md-3">
                 <div class="social_container">
                     <h5>
@@ -18,31 +17,23 @@
                     </h5>
                     <div class="social-box">
                         <?php
-// Check rows exists.
-if( have_rows('footer-link','option')  ):
-    // Loop through rows.
-    while( have_rows('footer-link','option') ) : the_row();
-     $image = get_sub_field('image');
-        ?>
-                <?php if(get_sub_field('footer-link-url','option' )!= ''): ?>
-                        <a href="">
-                            <img src="<?php the_sub_field('footer-link-icon','option'); ?>" alt="">
-                        </a>
-                        
-                        <?php 
-                        else :
-                            ?>
-                           
-                            <?php
-                        endif;
-                    endwhile;
-
-// No value.
-else :
-    // Do something...
-endif;
-?>
-
+                        // Check rows exists.
+                        if( have_rows('footer-link','option')  ):
+                            // Loop through rows.
+                            while( have_rows('footer-link','option') ) : the_row();
+                            $image = get_sub_field('image');
+                                ?>
+                                        <?php if(get_sub_field('footer-link-url','option' )!= ''): ?>
+                                                <a href="">
+                                                    <img src="<?php the_sub_field('footer-link-icon','option'); ?>" alt="">
+                                                </a>
+                                        <?php else :?>
+                                        <?php endif;
+                                        endwhile;
+                                        // No value.
+                                        else :
+                                            // Do something...
+                                        endif;?>
                     </div>
                 </div>
                 <div class="subscribe_container">
@@ -62,9 +53,7 @@ endif;
 <section class="container-fluid footer_section">
     <p>
         <?php the_field('copyright-tittle','option') ?>
-        <a
-            href="<?php the_field('copyright-link','option') ?>"><?php the_field('copyright-link-display','option') ?></a>
-
+        <a href="<?php the_field('copyright-link','option') ?>"><?php the_field('copyright-link-display','option') ?></a>
     </p>
 </section>
 <!-- footer section -->

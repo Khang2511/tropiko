@@ -6,6 +6,4 @@ get_header(); ?>
 
 <?php get_template_part( 'template-part/contact-part','part' ) ?>
   
-
-
-  <?php get_footer(); ?>
+<?php get_footer(); ?>

@@ -61,7 +61,7 @@ if(!function_exists('test_menu')){
           'menu'                 => '',
           'container_id'         => 'col-md-3',
           'container_aria_label' => '',
-          'menu_class'           => '',
+          'menu_class'           => 'footer-menu',
           'menu_id'              => '',
           'echo'                 => true,
           'fallback_cb'          => 'wp_page_menu',
@@ -91,3 +91,6 @@ if( function_exists('acf_add_options_page') ) {
 	acf_add_options_page();
 	
 }
+
+	
+add_theme_support( 'post-thumbnails' );

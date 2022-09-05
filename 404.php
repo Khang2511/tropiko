@@ -1,8 +1,18 @@
 <?php get_header();?>
-<div class="contact_section layout_padding search-container">
+<section class="fruit_section layout_padding-top page">
     <div class="container">
-        <h3>404 PAGE NOT FOUND</h3>
-
+        <div class="">
+            <div class="fruit_detail-box">
+            <?php the_field('404-tittle', 'option'); ?>
+            <?php the_field('404-desc', 'option'); ?>
+        </div>
     </div>
-</div>
+</section>
+<style>
+    .fruit_section {
+        background-image: url(<?php the_field('404-img', 'option');
+        ?>);
+        background-repeat: no-repeat;
+    }
+    </style>
 <?php get_footer();?>

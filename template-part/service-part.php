@@ -9,15 +9,13 @@
         <div class=" layout_padding2">
             <div class="card-deck">
                 <?php
-// Check rows exists.
-if( have_rows('services-items') ):
-    // Loop through rows.
-    while( have_rows('services-items') ) : the_row();
-        ?>
-
+                // Check rows exists.
+                if( have_rows('services-items') ):
+                    // Loop through rows.
+                while( have_rows('services-items') ) : the_row();
+                ?>
                 <div class="card">
                     <img class="card-img-top" src="<?php the_sub_field('services-items-icon'); ?>" alt="Card image cap" />
-
                     <div class="card-body">
                         <h5 class="card-title"><?php the_sub_field('services-items-tittle'); ?></h5>
                         <p class="card-text">
@@ -25,14 +23,12 @@ if( have_rows('services-items') ):
                         </p>
                     </div>
                 </div>
-
                 <?php endwhile;
-
-// No value.
-else :
-    // Do something...
-endif;
-?>
+                // No value.
+                else :
+                    // Do something...
+                endif;
+                ?>
             </div>
         </div>
         <div class="d-flex justify-content-center">
